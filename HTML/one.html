@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+#example{ width:500px;
+	 height:340px;
+	border:1px solid;
+	}
+             .A{
+        float:left;
+        width:150px;
+	height:100px;
+	border:1px solid;
+	display:inline-block;
+	margin:5px;
+        font-size:45px;
+        text-align:center;
+        padding-top:45px;
+        font-weight:900; 
+        background:url(abc.png);
+	}
+</style>
+<script>
+var Ar=['A','A','B','B','C','C'];
+var count=0,tcount=0;
+var tile1='',tile2='';
+            function data(){
+ var s=' ';
+for(var i=0;i<=5;i++){
+s=s+'<Div id="my'+i+'"class="A" onclick="Data2('+i+')"></Div>'
+}
+document.getElementById("Example").innerHTML=s;
+}
+function Data2(t)
+{
+    count++;
+    if(count==1){
+tile1=t;
+ document.getElementById("my"+t).innerHTML=Ar[t];
+ document.getElementById("my"+t).style.background="white"
+               }
+if(count==2){
+   tile2=t;
+ document.getElementById("my"+t).innerHTML=Ar[t];
+ document.getElementById("my"+t).style.background="white";
+count=0;
+if(Ar[tile1]!=Ar[tile2])
+         {
+setTimeout('Message("Dice Are Not Equal")',200);
+         }
+else{tcount++;
+     if(tcount==3)
+         {
+setTimeout('Message2()',200);
+        }
+}
+         }
+}
+function Message(S)
+ {
+ alert(S);
+document.getElementById("my"+tile1).style.background='url("abc.png")';  
+document.getElementById("my"+tile1).innerHTML="";  document.getElementById("my"+tile2).style.background='url("MIS.png")';  
+document.getElementById("my"+tile2).innerHTML=""; 
+}
+
+function Message2(S)
+ {
+   alert("Game Completed")
+   location.reload();
+}
+</script>
+<title> My Page</title>
+</head>
+<body>
+<Div id="Example"> </Div>
+<input type="button"value="click"onclick="data()">
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+#Example{width:900px;
+         height:500px;
+		 border:1px solid;}
+     .A {height:100px;
+	 width:100px;
+	 border:1px solid red;
+	 display:inline-block;
+	 margin:1px;
+	 background:red;}		 
+</style>
+<script>
+      function Data()
+	  {
+	  var s=' ';
+	  for (var i=1; i<=5; i++)
+	  {
+	  S= s + '<div id="My '+i+'" class="A" onclick="Data2('+i+')"> </div>'
+	  }
+	  document.getElementById("Example").innerHTML=S;
+	  }
+	  function Data2(t)
+	  {
+	  document.getElementById("My"+t).style.background= 'url("file:///C:/Users/chintu/Desktop/abc.png")';
+	  }
+</script>
+<title>This is my page</title>
+</head>
+<body> 
+     This is my page
+	 <div id="Example"> </div>
+	 <input type ="button" value="click" onclick="Data( )">
+</body>
+	</html>

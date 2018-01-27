@@ -1,0 +1,150 @@
+<html>
+   <head>
+	<style>
+			.txt1,.txt2{border:2PX SOLID BLACK;MARGIN:0PX;PADDING:10PX;HEIGHT:40px;WIDTH:250px;}
+			.txt1{border-bottom:125px;}
+			.txt2{border-top:none}
+	 .key
+	 {
+	 height:40px;
+     width:60px;
+     font-size:25px;
+	 }
+	</style>
+        <script>
+        function Ini()
+		        {
+           Rform.b.value=0;
+              var ch;
+				}
+        function Data(num)
+		       {
+          Rform.a.value=Rform.a.value+num;
+                }
+	    function Back()
+		          {
+		  Rform.a.value=parseInt(Rform.a.value/10)
+				  }
+	    function factorial()
+				  {
+				var fact=1;
+				var num=Rform.b.value;
+				  if(num>0)
+				  {
+			for(var i=Num;i>0;i--)
+				 {fact=fact*i;}
+				 Rform.a.value=fact;
+				  }
+				 else
+				  {
+				  Rform.a.value=undefined;
+				  }
+				  }
+         function Result(sign)
+                         {
+                     switch(sign)
+                         {
+                   case '+': 
+		                 {
+		      Rform.b.value=parseInt(Rform.a.value)+parseInt(Rform.b.value);
+                        Rform.a.value="";
+                           ch='+';
+                             break;
+                            }  
+                   case '-':
+         				   {
+			  Rform.b.value=parseInt(Rform.a.value)-parseInt(Rform.b.value);
+                        Rform.a.value="";
+                           ch='-';
+                             break;
+					    }	
+                         case '*':
+         				   {
+                                if(Rform.b.value==0)
+                                     {
+                                          Rform.b.value=1;
+                                     }
+			  Rform.b.value=parseInt(Rform.a.value)*parseInt(Rform.b.value);
+                        Rform.a.value="";
+                           ch='*';
+                             break;
+					    }							
+                       }
+                      }
+        function Ans()
+                  {
+                switch(ch)
+                    {
+                    case '+':
+                        {
+              Rform.b.value=parseInt(Rform.a.value)+parseInt(Rform.b.value);
+                            break;
+                        }
+                    case '-':
+                        {
+              Rform.b.value=parseInt(Rform.a.value)-parseInt(Rform.b.value);
+                           break;
+                        }
+case '*':
+                        {
+              Rform.b.value=parseInt(Rform.a.value)*parseInt(Rform.b.value);
+                           break;
+                        }
+                       }
+                    }
+        </script>
+  </head>
+ <body onLoad="Ini()"><form name="Rform">
+ <table>
+ <caption style="font-size:35px;color:#4d0120;"><b>CALCULATOR</b></caption>
+ </table>
+   <table border="20px"bgcolor="gray">
+     <tr>
+	     <td>
+		 <input type="text"class="txt1" name="b"><br>
+         <input type="text"class="txt2" name="a">
+		 </td>
+     </tr>
+     <tr>
+      <td>
+	    <input type="reset" value="CE"onclick="Data()"class="key">
+	    <input type="submit" value="C"onclick="Data()"class="key">
+	    <input type="button" value="<-"onClick="Back()"class="key">	
+	    <input type="button" value="!" onClick="factorial()"class="key">
+		</td>
+		</tr>
+		<tr>
+		<td>
+        <input type="button" value="7" onclick="Data(7)"class="key">
+	    <input type="button" value="8"onclick="Data(8)"class="key">
+	    <input type="button" value="9" onclick="Data(9)"class="key">
+		<input type="button" value="/" onclick="Result('/')"class="key">
+		</td>
+		</tr>
+		<tr>
+		<td>
+	    <input type="button" value="4" onclick="Data(4)"class="key">
+	    <input type="button" value="5" onclick="Data(5)"class="key">
+	    <input type="button" value="6" onclick="Data(6)"class="key">
+	    <input type="button" value="*" onclick="Result('*')"class="key">
+		</td>
+		</tr>
+		<tr>
+		<td>
+	    <input type="button" value="1" onclick="Data(1)"class="key">
+	    <input type="button" value="2" onclick="Data(2)"class="key">
+	    <input type="button" value="3" onclick="Data(3)"class="key">
+	    <input type="button" value="-" onclick="Result('-')"class="key">
+		</td>
+		</tr>
+		<tr>
+		<td>
+	    <input type="button" value="0" onclick="Data(0)"class="key">
+	    <input type="button" value="." onclick="Data('.')"class="key">
+        <input type="button" value="=" onclick="Ans()"class="key" >
+	    <input type="button" value="+" onclick="Result('+')"class="key">
+     </td>
+    </tr>
+   </table>
+ </form></body>
+</html>

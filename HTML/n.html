@@ -1,0 +1,18 @@
+<html>
+<head>
+<script>
+         function Data(){
+        var s=' ';
+      for(var i=1; i<=5; i++){
+           s=s+  '<div id="MY '+i+' "class="A"> This'+i+' is my page </div>'
+               document.getElementById("Example").innerHTML=s;
+                   }
+	</script>
+		<title> My Page </title>
+</head>
+<body>
+       This is my page
+	   <div id= "Example"> </div>
+     <input type="Button" value="click"  onclick="Data()">
+</body>
+</html>

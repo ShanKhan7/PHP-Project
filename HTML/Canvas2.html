@@ -1,0 +1,18 @@
+<html>
+<head>
+ <script>
+ function Data(){
+ var ctx=document.getElementById("My canvas"); 
+ var ct=ctx.getContext("2d");
+ ct.fillStyle="Red";
+ ct.fillRect(30,40,200,170);
+ ct.fillStyle="Green";
+ ct.fillRect(50,70,160,100);
+ ct.clearRect(70,80,120,90);
+ }
+ </script>
+ </head>
+ <body onLoad="Data()">
+ <canvas id="My canvas" height="300" width="300" border="1px solid:black"></canvas>
+</body>
+</html>

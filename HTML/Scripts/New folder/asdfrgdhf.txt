@@ -1,0 +1,14 @@
+use Sample2
+select * from tab
+Select * from Students
+create table Students
+  (
+    ID int identity primary key,
+    Name   varchar(50),
+    Age int ,
+    Email varchAR(40),
+    Gender varchar(50),
+    City varchar(50),
+    Subject varchar(50)
+  )
+	  sELECT * FROM STUDENTS

@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+function Data(){
+ans='';
+limit=document.getElementById("li").value;
+for(i=1; i<=limit; i++)
+    {
+	if(i%2==0){continue}
+	ans=ans+i;
+	}
+	document.getElementById("ans").innerHTML=ans;
+}
+</script>
+</head>
+<body>
+Limit:<input type="text" id="li" oninput="Data()">
+<br> <hr> 
+<div id="ans"> </div>
+</body>
+</html>

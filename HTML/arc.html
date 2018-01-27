@@ -1,0 +1,15 @@
+<HTML>
+ <BODY>
+ <CANVAS ID="myCanvas" width="300" height="300" style="border:1px solid black">
+ </CANVAS>
+ <SCRIPT>
+ var c=document.getElementById ("myCanvas");
+ var ctx=c.getContext("2d");
+ ctx.beginPath(); 
+ ctx.arc(100, 90, 70, 1.5, Math.PI*2, false);
+ ctx.closePath();
+ ctx.fillStyle="green";
+ ctx.fill(); 
+ </SCRIPT> 
+ </BODY>
+ </HTML>

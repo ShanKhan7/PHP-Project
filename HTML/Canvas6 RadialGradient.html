@@ -1,0 +1,21 @@
+<html>
+<head>
+ <script>
+ function Data(){
+ var ctx=document.getElementById("My canvas"); 
+ var ct=ctx.getContext("2d");
+ var grad=ct.createRadialGradient (75,50,5,90,60,100); 
+ grad.addColorStop(0.2,"blue");
+ grad.addColorStop(0.9,"green");
+ grad.addColorStop(0.5,"yellow");
+ grad.addColorStop(0.7,"pink");
+ ct.fillStyle=grad;
+ ct.fillRect(20,20,180,180); 
+ 
+ }
+ </script>
+ </head>
+ <body onLoad="Data()">
+ <canvas id="My canvas" height="300" width="300" border="1px solid:black"></canvas>
+</body>
+</html>
